@@ -35,10 +35,40 @@ Este ecosistema de datos fue diseñado para transformar una operación de market
 
 ---
 
-### Estructura del Repositorio
-1.  **01_ddl_star_schema.sql:** Definición de infraestructura, índices B-Tree estratégicos y roles de seguridad.
-2.  **02_ingestion_stress_test.sql:** Lógica de carga masiva, manejo de excepciones y validación de integridad.
-3.  **03_analytics_layer.sql:** Vistas de monitoreo ejecutivo, detección de drift y métricas de ROI real.
+# Estructura del Repositorio
+
+A continuación, se detalla la organización de los archivos SQL que componen el pipeline de datos, numerados secuencialmente para facilitar un despliegue lógico desde la creación del entorno hasta las pruebas de estrés finales.
+
+---
+
+### 01_setup_infrastructure.sql
+**Infraestructura Base y Modelado**
+* **Modelo en Estrella (Star Schema):** Definición de tablas de hechos y dimensiones para optimizar la analítica.
+* **Optimización:** Implementación de índices B-Tree estratégicos para acelerar el tiempo de respuesta en consultas complejas.
+* **Auditoría:** Configuración de capas de registro para trazabilidad total de procesos.
+
+### 02_automated_ingestion.sql
+**Lógica de Ingesta y Calidad**
+* **Poblamiento:** Rutinas automatizadas para la carga de dimensiones.
+* **Prueba de Estrés:** Simulación de carga masiva de 11,000 registros para validar el rendimiento.
+* **Integridad:** Manejo estricto de integridad referencial para asegurar la calidad del dato desde el origen.
+
+### 03_advanced_analytics.sql
+**Capa de Inteligencia de Negocios**
+* **Minuto de Oro:** Monitoreo en tiempo real de métricas críticas.
+* **Análisis de Cohortes:** Implementación de funciones de ventana para el seguimiento de grupos de usuarios.
+* **Vistas Ejecutivas:** Dashboards SQL directos para la visualización del ROI.
+
+### 04_qa_and_integrity_tests.sql
+**Control de Calidad y Resiliencia**
+* **Late-Arriving Data:** Validación de la capacidad del sistema para procesar datos con retraso de red.
+* **Detección de Anomalías (Data Drift):** Pruebas proactivas para identificar desviaciones inesperadas en los flujos de datos.
+
+---
+
+> **Nota técnica:** El orden numérico garantiza que las dependencias de objetos (tablas, funciones y vistas) se creen correctamente durante el despliegue.
+
+¿Te gustaría que desarrollemos el contenido técnico de alguno de estos archivos específicos?
 
 ### Conclusión y Roadmap
 E-COMATRICS estabiliza la infraestructura de datos eliminando el error humano.
