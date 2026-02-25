@@ -64,11 +64,5 @@ A continuación, se detalla la organización de los archivos SQL que componen el
 * **Late-Arriving Data:** Validación de la capacidad del sistema para procesar datos con retraso de red.
 * **Detección de Anomalías (Data Drift):** Pruebas proactivas para identificar desviaciones inesperadas en los flujos de datos.
 
----
-
-> **Nota técnica:** El orden numérico garantiza que las dependencias de objetos (tablas, funciones y vistas) se creen correctamente durante el despliegue.
-
-¿Te gustaría que desarrollemos el contenido técnico de alguno de estos archivos específicos?
-
 ### Conclusión y Roadmap
 E-COMATRICS estabiliza la infraestructura de datos eliminando el error humano.
